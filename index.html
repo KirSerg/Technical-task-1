@@ -3,67 +3,45 @@
 <head>
   <meta charset="utf-8">
   <title>Flexbox</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<form id="form">
-	<div id="top">Форма ввода:</div>
+  <!--Форма ввода значений-->
+  <form id="form">
+    <div id="top">Форма ввода:</div>
 	<div id="wrapper">
-		<div>
-			<label>Первое число:</label>
-		</div>		
-		<div>
-			<input type="text" id="first" value="0.1"></input>
-		</div>
-		</br> 
-		<div>
-			<label>Второе число:</label>
-		</div>
-		<input type="text" id="second" value="0.2"></input> 
-		</br>
-		</br>
-		<div><input type="button" id="button" value="Сложить"></input></div>
+	  <div>
+	    <strong>Первое число:</strong>
+	  </div>		
+	  <div>
+	    <input type="text" id="first" value="0.1"></input>
+	  </div>
+	  <br> 
+	  <div>
+	    <strong>Второе число:</strong>
+	  </div>
+	  <div>
+	    <input type="text" id="second" value="0.2"></input>
+	  </div> 
+	  <br>
+	  <div>
+	    <input type="button" id="button" value="Сложить"></input>
+	  </div>
 	</div>
-	</form>	
-	<div id="result-form">
-		<div><label>Результат:</label></div>
-		</br>
-		</br>
-		<span id="result"></span>
-		</br>
-		</br>
-		<a href="#" class="button" id="button2">OK</a>
-	</div>
-
-	<script>
-		var first1 = document.querySelector('#first');
-		var second1 = document.querySelector('#second');
-
-		button.onclick = function() {
-			if ((isNaN(parseFloat(first1.value)) 
-				|| !isFinite(first1.value)) 
-				|| (isNaN(parseFloat(second1.value)) 
-				|| !isFinite(second1.value))) {
-
-				alert("Введите правильные данные");
-			}
-			else{
-				if ((+first1.value === Math.floor(+first1.value)) 
-					&& (+second1.value === Math.floor(+second1.value))) {
-
-					document.querySelector("#result").innerHTML = +first1.value + +second1.value;
-				}				
-				else document.querySelector("#result").innerHTML = (+first1.value + +second1.value).toFixed(1);
-			}
-			document.querySelector("#result-form").style.display = 'block';
-		}
-
-		button2.onclick = function() {
-			document.querySelector('#result').innerHTML = '';
-			document.querySelector('#result-form').style.display = 'none';
-		}
-	</script>
+  </form>
+  <!-- Форма модального окна -->
+  <div id="result-form">
+    <div>
+	  <label>Результат:</label>
+    </div>
+    <br>
+    <br>
+    <span id="result"></span>
+    <br>
+    <br>
+    <a href="#" class="button" id="buttonOK">OK</a>
+  </div>
+  <script src="js/script.js"></script>
 </body>
-	
 
 </html>
